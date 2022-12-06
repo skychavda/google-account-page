@@ -1,6 +1,7 @@
 import Slider from "react-slick";
+import { TabsContainerProps } from "./TabsContainer";
 
-export default function SliderContainer({ tabDetail }: any) {
+export default function SliderContainer({ tabDetail }: TabsContainerProps) {
   const settings = {
     dots: true,
     slidesToShow: 1,

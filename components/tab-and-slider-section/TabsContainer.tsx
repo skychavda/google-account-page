@@ -1,6 +1,21 @@
 import { useState } from "react";
 
-export default function TabsContainer({ tabDetail }: any) {
+export interface TabsContainerProps {
+  tabDetail: {
+    tabs: Array<string>;
+    tabsData: Array<{
+      text: string;
+      videoPoster: string;
+      videos: Array<{
+        id: number;
+        src: string;
+        type: string;
+      }>;
+    }>;
+  };
+}
+
+export default function TabsContainer({ tabDetail }: TabsContainerProps) {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (

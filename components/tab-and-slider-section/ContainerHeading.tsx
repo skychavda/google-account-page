@@ -1,7 +1,16 @@
 import { useEffect } from "react";
 import AnimateTextWhenScrolling from "../../helper";
 
-export default function ContainerHeading({ headingDetail, divId }: any) {
+interface HeadingContentProps {
+  divId: string;
+  headingDetail: {
+    image: string;
+    title: string;
+    description: string;
+  };
+}
+
+export default function ContainerHeading({ headingDetail, divId }: HeadingContentProps) {
   
   useEffect(() => {
     AnimateTextWhenScrolling(`${divId}-heading`);

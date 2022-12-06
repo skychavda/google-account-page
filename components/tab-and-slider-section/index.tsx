@@ -3,7 +3,20 @@ import ContainerHeading from "./ContainerHeading";
 import SliderContainer from "./SliderContainer";
 import TabsContainer from "./TabsContainer";
 
-export default function TabsAndSliderSection({ containerDetail }: any) {
+interface TabsAndSliderSectionProps {
+  containerDetail: {
+    heading: string;
+    image: string;
+    description: string;
+    id: string;
+    tabs: Array<string>;
+    tabsData: Array<object | any>;
+  };
+}
+
+export default function TabsAndSliderSection({
+  containerDetail,
+}: TabsAndSliderSectionProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   const checkWidth = () => {
@@ -12,7 +25,7 @@ export default function TabsAndSliderSection({ containerDetail }: any) {
 
   // if mobile then only display slider
   useEffect(() => {
-    setIsMobile(window.innerHeight <= 768)
+    setIsMobile(window.innerHeight <= 768);
     window.addEventListener("resize", checkWidth);
 
     () => {
@@ -23,7 +36,7 @@ export default function TabsAndSliderSection({ containerDetail }: any) {
   return (
     <div id={containerDetail.id}>
       <ContainerHeading
-      divId={containerDetail.id}
+        divId={containerDetail.id}
         headingDetail={{
           image: containerDetail.image,
           title: containerDetail.heading,
