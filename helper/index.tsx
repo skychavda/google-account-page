@@ -12,5 +12,6 @@ export default function AnimateTextWhenScrolling(elementId = '') {
     });
   });
 
-  observer.observe(document.getElementById(elementId));
+  const element: any = document?.getElementById(elementId);
+  observer.observe(element);
 }

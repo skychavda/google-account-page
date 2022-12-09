@@ -7,12 +7,17 @@ import HeroContainer from "../components/hero";
 import Sidebar from "../components/sidebar";
 import TabsAndSliderSection from "../components/tab-and-slider-section";
 import { CONTAINER_DETAILS } from "../constant";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Home() {
   return (
     <>
-       {/* Adding Meta tags for SEO */}
-       <Head>
+      {/* Adding Meta tags for SEO */}
+      <Head>
         <title>Google Account</title>
         <meta />
       </Head>
@@ -28,4 +33,12 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps({locale}: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['hero']))
+    }
+  }
 }

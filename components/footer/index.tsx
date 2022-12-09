@@ -1,3 +1,5 @@
+import LangDropDown from "../lang-dropdown";
+
 export default function Footer() {
   return (
     <footer className="mt-10 bg-[#f8f9fa] text-sm">
@@ -18,9 +20,7 @@ export default function Footer() {
         </div>
         <div className="flex gap-5 text-[#5f6368] items-baseline">
           <p className="hover:text-black hover:cursor-pointer">Help</p>
-          
-          {/* DropDown part will cover in next video cause it has i18 multi langauge support  */}
-          <p>dropdown</p>
+          <LangDropDown />
         </div>
       </section>
     </footer>

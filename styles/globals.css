@@ -40,7 +40,11 @@
 
 .animated-text .slide-up:nth-child(7) {
   animation-delay: 0.29s;
-} 
+}
+
+.animated-text .slide-up:nth-child(8) {
+  animation-delay: 0.29s;
+}
 
 .slide-up {
   animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
