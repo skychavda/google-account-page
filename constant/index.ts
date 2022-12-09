@@ -204,3 +204,9 @@ export const CONTAINER_DETAILS = [
     ]
   }
 ]
+
+export const LANG_DROPDOWN = [
+  {id: 1, value: 'en', label: 'English'},
+  {id: 2, value: 'gu', label: 'Gujarati'},
+  {id: 3, value: 'hi', label: 'Hindi'},
+]
