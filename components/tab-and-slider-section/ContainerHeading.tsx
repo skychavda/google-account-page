@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect } from "react";
 import AnimateTextWhenScrolling from "../../helper";
 
@@ -18,7 +19,7 @@ export default function ContainerHeading({ headingDetail, divId }: HeadingConten
 
   return (
     <div className="flex flex-col items-center justify-center max-w-none md:max-w-4xl px-6 mb-6 md:mx-auto md:px-20 mt-20">
-      <img src={headingDetail.image} className="w-48 h-48 md:w-36 md:h-36" />
+      <Image src={headingDetail.image} className="w-48 h-48 md:w-36 md:h-36" alt="google"/>
       <h2
         className="animated-text font-medium text-3xl md:text-6xl mb-5 text-center"
         id={`${divId}-heading`}

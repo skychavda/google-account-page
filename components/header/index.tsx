@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Hamburger from "../../svg/Hamburger";
 
@@ -46,9 +47,10 @@ export default function Header() {
         <Hamburger />
       </div>
       <div className="flex items-center max-md:flex-1">
-        <img
+        <Image
           src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
           className="ml-4 w-14 h-14 md:w-20 md:h-20"
+          alt="google"
         />
         <a href="" className="text-lg text-slate-500  ml-2">
           Account

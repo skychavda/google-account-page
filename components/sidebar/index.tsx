@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Sidebar() {
@@ -21,9 +22,10 @@ export default function Sidebar() {
       />
       <div className="max-w-72 w-72 bg-white flex flex-col absolute h-full top-0 left-0">
         <div className="flex flex-row items-center px-4 py-4 border-b-[1px] border-slate-200">
-          <img
+          <Image
             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
             className="w-20 h-auto"
+            alt="google"
           />
           <a href="" className="text-lg text-slate-500 ml-2">
             Account
