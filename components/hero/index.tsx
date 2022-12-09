@@ -1,16 +1,23 @@
-import { useTranslation } from "react-i18next";
-
+import { useTranslation } from "next-i18next";
 
 export default function HeroContainer() {
-  const {t} = useTranslation('hero');
+  const { t } = useTranslation("hero");
 
-  console.log('Line----7 index.tsx', t('title'))
   return (
     <section>
       <div className="flex justify-between items-center max-w-screen-xl mx-auto py-28 px-8 max-md:flex-col max-md:flex-col-reverse max-md:py-20">
         <div className="w-1/2 max-md:w-full max-md:p-6">
           <h1 className="animated-text mb-4 text-5xl font-medium max-md:text-3xl">
-            {t("title").split(' ').map((word, index) => <span className="pt-2.5 pr-2.5 inline-block slide-up" key={index}>{word}</span>)}
+            {t("title")
+              .split(" ")
+              .map((word, index) => (
+                <span
+                  className="pt-2.5 pr-2.5 inline-block slide-up"
+                  key={index}
+                >
+                  {word}
+                </span>
+              ))}
             {/* <span className="pt-2.5 pr-2.5 inline-block slide-up">All</span>
             <span className="pt-2.5 pr-2.5 inline-block slide-up">of</span>
             <span className="pt-2.5 pr-2.5 inline-block slide-up">Google,</span>
@@ -18,9 +25,7 @@ export default function HeroContainer() {
             <span className="pt-2.5 pr-2.5 inline-block slide-up">for</span>
             <span className="pt-2.5 pr-2.5 inline-block slide-up">you</span> */}
           </h1>
-          <p className="text-base text-slate-500">
-            {t('description')}
-          </p>
+          <p className="text-base text-slate-500">{t("description")}</p>
         </div>
         <div className="w-full">
           <video
