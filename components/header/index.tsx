@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import Hamburger from "../../svg/Hamburger";
 
@@ -36,9 +35,8 @@ export default function Header() {
 
   return (
     <div
-      className={`flex items-center justify-between shadow-lg h-16 px-2 w-full sticky top-0 z-[10] bg-white transition-all ${
-        isScrolling ? "-translate-y-16" : ""
-      }`}
+      className={`flex items-center justify-between shadow-lg h-16 px-2 w-full sticky top-0 z-[10] bg-white transition-all ${isScrolling ? "-translate-y-16" : ""
+        }`}
     >
       <div
         className="flex items-center text-3xl text-gray-500 md:hidden cursor-pointer"
@@ -47,7 +45,7 @@ export default function Header() {
         <Hamburger />
       </div>
       <div className="flex items-center max-md:flex-1">
-        <Image
+        <img
           src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
           className="ml-4 w-14 h-14 md:w-20 md:h-20"
           alt="google"

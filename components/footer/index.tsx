@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LangDropDown from "../lang-dropdown";
 
 export default function Footer() {
@@ -6,7 +5,7 @@ export default function Footer() {
     <footer className="mt-10 bg-[#f8f9fa] text-sm">
       <section className="flex pt-10 px-8 pb-5 flex-col md:flex-row">
         <div className="flex mr-8 mb-8">
-          <Image
+          <img
             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
             className="grayscale"
             width={80}

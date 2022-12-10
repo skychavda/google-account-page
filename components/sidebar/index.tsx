@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Sidebar() {
@@ -22,7 +21,7 @@ export default function Sidebar() {
       />
       <div className="max-w-72 w-72 bg-white flex flex-col absolute h-full top-0 left-0">
         <div className="flex flex-row items-center px-4 py-4 border-b-[1px] border-slate-200">
-          <Image
+          <img
             src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
             className="w-20 h-auto"
             alt="google"
@@ -33,17 +32,15 @@ export default function Sidebar() {
         </div>
         <div className="text-sm py-4 flex-1 border-b-[1px] border-slate-200">
           <p
-            className={`${itemClass} ${
-              selectedItem === "overview" ? slectedItemClass : ""
-            }`}
+            className={`${itemClass} ${selectedItem === "overview" ? slectedItemClass : ""
+              }`}
             onClick={() => setSelectedItem("overview")}
           >
             Overview
           </p>
           <p
-            className={`${itemClass} ${
-              selectedItem === "tools" ? slectedItemClass : ""
-            }`}
+            className={`${itemClass} ${selectedItem === "tools" ? slectedItemClass : ""
+              }`}
             onClick={() => setSelectedItem("tools")}
           >
             Privacy Tools
