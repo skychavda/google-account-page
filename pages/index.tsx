@@ -7,7 +7,6 @@ import HeroContainer from "../components/hero";
 import Sidebar from "../components/sidebar";
 import TabsAndSliderSection from "../components/tab-and-slider-section";
 import { CONTAINER_DETAILS } from "../constant";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -33,12 +32,4 @@ export default function Home() {
       <Footer />
     </>
   );
-}
-
-export async function getStaticProps({locale}: any) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['hero']))
-    }
-  }
 }
